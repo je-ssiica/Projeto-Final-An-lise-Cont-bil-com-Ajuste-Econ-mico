@@ -111,8 +111,13 @@ print(df_ipca.columns)
 st.write("\nDataFrame resultado:")
 st.dataframe(df_ipca)
 
+"""5) Combine as duas df (Excel e IPEA) em uma nova df e calcule nova coluna chamada Receita Real (peso: 2,0)
 
-""
+Utilize a função pd.merge() para unificar as duas df utiilizando a coluna Ano como conexão (chave primária) entre elas
+Crie nova coluna chamada Receita Real que será o resultado da Receita Líquida de cada ano deduzido o IPCA do ano: Receita Real = Receitta Líquida - ( Receita Líquida * (IPCA/100) )
+Apresente a nova df combinada
+"""
+
 import pandas as pd
 import streamlit as st
 
