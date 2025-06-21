@@ -42,7 +42,7 @@ st = ("Este projeto tem como objetivo integrar análise de dados contábeis de e
 Dica: Utilize `head(len(df))`
 """
 
-arquivo = ("/content/empresas_dados.csv")
+arquivo = ("empresas_dados.csv")
 df = pd.read_csv(arquivo, sep=';')
 (st.head(len(df)))
 
