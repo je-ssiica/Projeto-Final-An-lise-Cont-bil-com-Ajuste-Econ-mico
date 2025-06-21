@@ -30,7 +30,7 @@ import pandas as pd
 DataFrame = pd.DataFrame
 
 st.set_page_title = "Lista de Exercícios 4"
-st.write(page_title)
+st.write(st.set_page_title)
 
 st.header = "Projeto Final – Análise Contábil com Ajuste Econômico"
 st.write(header)
