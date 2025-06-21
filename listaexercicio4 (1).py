@@ -90,7 +90,9 @@ st.pyplot(fig)
 import ipeadatapy as ip
 
 import pandas as pd
+import stremlit as st
 
+st.dataframe(df_ipca)
 df_ipca = ip.timeseries('PRECOS12_IPCA12')
 
 df_ipca = df_ipca[(df_ipca['YEAR'] >= 2010) & (df_ipca['YEAR'] <= 2024)]
