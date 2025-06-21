@@ -42,11 +42,11 @@ st = ("Este projeto tem como objetivo integrar análise de dados contábeis de e
 Dica: Utilize `head(len(df))`
 """
 
-import streamlit as st
 import pandas as pd
+import streamlit as st
 
 df = pd.read_csv('empresas_dados.csv', sep=";")
-st.dataframe(st.head(len(df)))
+st.dataframe(df.head(len(df)))
 
 
 
