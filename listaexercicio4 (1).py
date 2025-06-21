@@ -18,8 +18,7 @@ Este projeto tem como objetivo integrar análise de dados contábeis de empresas
 """
 
 
-!pip install ipeadatapy
-!pip install streamlit
+
 
 
 import pandas as pd
