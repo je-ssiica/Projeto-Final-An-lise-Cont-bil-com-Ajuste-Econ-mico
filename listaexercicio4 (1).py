@@ -86,16 +86,15 @@ st.pyplot(fig)
 - Apresente a df para checar se tudo deu certo
 """
 
-
-import ipeadatapy as ip
-
 import pandas as pd
-import streamlit as st
+import streamlit as st  
 
-st.dataframe(df_ipca)
 df_ipca = ip.timeseries('PRECOS12_IPCA12')
 
 df_ipca = df_ipca[(df_ipca['YEAR'] >= 2010) & (df_ipca['YEAR'] <= 2024)]
+
+st.dataframe(df_ipca)
+
 
 st.write("Colunas antes da alteração:")
 print(df_ipca.columns)
