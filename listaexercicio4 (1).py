@@ -62,8 +62,8 @@ fig, ax = plt.subplots()
 st_grouped = df.groupby('Ano')[['Margem Líquida', 'ROA']].mean().reset_index()
 
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.plot(st_grouped['Ano'], df_grouped['Margem Líquida'], marker='o', label='Margem Líquida (%)')
-ax.plot(st_grouped['Ano'], df_grouped['ROA'], marker='o', label='ROA (%)')
+ax.plot(st_grouped['Ano'], st_grouped['Margem Líquida'], marker='o', label='Margem Líquida (%)')
+ax.plot(st_grouped['Ano'], st_grouped['ROA'], marker='o', label='ROA (%)')
 
 ax.set_title('Indicadores Financeiros ao Longo dos Anos')
 ax.xlabel('Ano')
