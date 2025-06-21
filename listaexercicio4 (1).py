@@ -139,6 +139,7 @@ st.dataframe(df_combined)
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
 
 st_combined = pd.DataFrame({
     'Ano': [2021, 2022, 2023],
@@ -146,16 +147,18 @@ st_combined = pd.DataFrame({
     'Receita Real': [965, 1152, 1330]
 })
 
+
+fig, ax = plt.subplots(figsize=(10, 6))
 fig, ax = plt.subplots()
-ax.set.figure(figsize=(10,6))
-ax.set.plot(df_combined['Ano'], df_combined['Receita Líquida'], marker='o', label='Receita Líquida')
-ax.set.plot(df_combined['Ano'], df_combined['Receita Real'], marker='s', label='Receita Real')
-ax.set.title('Receita Líquida e Receita Real ao longo dos anos')
-ax.set.xlabel('Ano')
-ax.set.ylabel('Valor')
+
+ax.plot(df_combined['Ano'], df_combined['Receita Líquida'], marker='o', label='Receita Líquida')
+ax.plot(df_combined['Ano'], df_combined['Receita Real'], marker='s', label='Receita Real')
+ax.title('Receita Líquida e Receita Real ao longo dos anos')
+ax.set_xlabel('Ano')
+ax.set_ylabel('Valor')
 ax.set.legend()
 ax.set.grid(True)
-ax.set.show()
+plt.show()
 st.pyplot(fig)
 
 """7) Faça os ajustes necessários e leve este projeto para a web usando GitHub e Streamlit (peso: 2,0)
