@@ -43,7 +43,7 @@ Dica: Utilize `head(len(df))`
 """
 
 import pandas as pd
-st = pd.read_csv('empresas_dados.csv', sep=";")
+df = pd.read_csv('empresas_dados.csv', sep=";")
 st.dataframe(st.head(len(df)))
 
 
