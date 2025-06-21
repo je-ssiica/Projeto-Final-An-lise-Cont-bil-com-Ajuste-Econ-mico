@@ -13,6 +13,8 @@ Este projeto tem como objetivo integrar análise de dados contábeis de empresas
 1) Configure o título na barra do navegador, da página do projeto no Streamlit e descrição inicial do projeto (peso: 1,0)
 
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt 
 
 - Título na barra (`page_title`): Lista de Exercícios 4
 - Título da página (`header`): Projeto Final – Análise Contábil com Ajuste Econômico
