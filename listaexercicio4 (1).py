@@ -112,7 +112,8 @@ st.write("\nDataFrame resultado:")
 st.dataframe(df_ipca)
 
 
-""import pandas as pd
+""
+import pandas as pd
 import streamlit as st
 
 df_excel = pd.DataFrame({
