@@ -66,8 +66,8 @@ ax.plot(st_grouped['Ano'], st_grouped['Margem Líquida'], marker='o', label='Mar
 ax.plot(st_grouped['Ano'], st_grouped['ROA'], marker='o', label='ROA (%)')
 
 ax.set_title('Indicadores Financeiros ao Longo dos Anos')
-ax.xlabel('Ano')
-ax.ylabel('Percentual (%)')
+ax.set_xlabel('Ano')
+ax.set_ylabel('Percentual (%)')
 ax.legend()
 ax.grid(True)
 ax.show()
