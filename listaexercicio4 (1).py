@@ -17,7 +17,7 @@ Este projeto tem como objetivo integrar análise de dados contábeis de empresas
 - Descrição projeto (`write`): Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.
 """
 
-!pip install matplotlib
+
 !pip install ipeadatapy
 !pip install streamlit
 
