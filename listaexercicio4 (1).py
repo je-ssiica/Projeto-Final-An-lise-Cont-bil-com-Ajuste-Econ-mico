@@ -153,7 +153,7 @@ fig, ax = plt.subplots()
 
 ax.plot(df_combined['Ano'], df_combined['Receita Líquida'], marker='o', label='Receita Líquida')
 ax.plot(df_combined['Ano'], df_combined['Receita Real'], marker='s', label='Receita Real')
-ax.title('Receita Líquida e Receita Real ao longo dos anos')
+ax.set_title('Receita Líquida e Receita Real ao longo dos anos')
 ax.set_xlabel('Ano')
 ax.set_ylabel('Valor')
 ax.set.legend()
