@@ -112,44 +112,27 @@ st.write("\nDataFrame resultado:")
 st.dataframe(df_ipca)
 
 
-"""5) Combine as duas df (Excel e IPEA) em uma nova df e calcule nova coluna chamada Receita Real (peso: 2,0)
-
-- Utilize a função `pd.merge()` para unificar as duas df utiilizando a coluna Ano como conexão (chave primária) entre elas
-- Crie nova coluna chamada Receita Real que será o resultado da Receita Líquida de cada ano deduzido o IPCA do ano: `Receita Real = Receitta Líquida - ( Receita Líquida * (IPCA/100) )`
-- Apresente a nova df combinada
-
-"""
-import pandas as pd
+""import pandas as pd
 import streamlit as st
 
-
 df_excel = pd.DataFrame({
-    'Ano': [2022, 2023, 2024],
-    'Receita Líquida': [100000, 110000, 120000]
+    'Ano': [2020, 2021, 2022],
+    'Receita Líquida': [1000, 1200, 1400]
 })
 
 df_ipea = pd.DataFrame({
-    'Ano': [2022, 2023, 2024],
+    'Ano': [2020, 2021, 2022],
     'IPCA': [3.5, 4.0, 5.0]
 })
 
 df_combined = pd.merge(df_excel, df_ipea, on='Ano')
 
-
-df_combined['Receita Real'] = df_combined['Receita Líquida'] * (1 - df_combined['IPCA'] / 100)
+df_combined['Receita Real'] = df_combined['Receita Líquida'] - (
+    df_combined['Receita Líquida'] * (df_combined['IPCA'] / 100)
+)
 
 st.write("DataFrame resultado combinado:")
 st.dataframe(df_combined)
-st_excel = pd.DataFrame({
-    'Ano': [2020, 2021, 2022],
-    'Receita Líquida': [1000, 1200, 1400]
-})
-
-
-st_combined = pd.merge(df_excel, df_ipea, on='Ano')
-st_combined['Receita Real'] = df_combined['Receita Líquida'] * (1 - df_combined['IPCA'] / 100)
-
-st_combined
 
 """6) Crie gráfico de linha que apresente as variáveis Receita Líquida e Receita Real ao longo dos anos (no mesmo gráfico) (peso: 1,0)"""
 
