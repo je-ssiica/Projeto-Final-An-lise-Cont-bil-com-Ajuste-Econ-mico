@@ -42,9 +42,9 @@ st.write = ("Este projeto tem como objetivo integrar análise de dados contábei
 Dica: Utilize `head(len(df))`
 """
 
-arquivo = ("/content/empresas_dados.csv")
-st = pd.read_csv(arquivo, sep=';')
-(st.head(len(df)))
+import pandas as pd
+df = pd.read_csv('content/empresas_dados.csv', sep=";")
+st.dataframe(df.head(len(df)))
 
 """3) Calcule os indicadores Margem Líquida e ROA e salve como novas coluna da df. Depois apresente os dois indicadores no mesmo gráfico de linhas, agrupado por Ano  (peso: 1,0)
 
