@@ -119,16 +119,32 @@ st.dataframe(df_ipca)
 - Apresente a nova df combinada
 
 """
+import pandas as pd
+import streamlit as st
 
+
+df_excel = pd.DataFrame({
+    'Ano': [2022, 2023, 2024],
+    'Receita Líquida': [100000, 110000, 120000]
+})
+
+df_ipea = pd.DataFrame({
+    'Ano': [2022, 2023, 2024],
+    'IPCA': [3.5, 4.0, 5.0]
+})
+
+df_combined = pd.merge(df_excel, df_ipea, on='Ano')
+
+
+df_combined['Receita Real'] = df_combined['Receita Líquida'] * (1 - df_combined['IPCA'] / 100)
+
+st.write("DataFrame resultado combinado:")
+st.dataframe(df_combined)
 st_excel = pd.DataFrame({
     'Ano': [2020, 2021, 2022],
     'Receita Líquida': [1000, 1200, 1400]
 })
 
-st_ipea = pd.DataFrame({
-    'Ano': [2020, 2021, 2022],
-    'IPCA': [3.5, 4.0, 5.0]
-})
 
 st_combined = pd.merge(df_excel, df_ipea, on='Ano')
 st_combined['Receita Real'] = df_combined['Receita Líquida'] * (1 - df_combined['IPCA'] / 100)
