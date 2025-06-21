@@ -70,8 +70,9 @@ ax.set_xlabel('Ano')
 ax.set_ylabel('Percentual (%)')
 ax.legend()
 ax.grid(True)
-ax.show()
+plt.show()
 st.pyplot(fig)
+
 
 """4) Utilize o pacote ipeadatapy e faça busca para encontrar o indicador que traga o IPCA, taxa de variação, em % e anual: (peso: 2,0)
 
