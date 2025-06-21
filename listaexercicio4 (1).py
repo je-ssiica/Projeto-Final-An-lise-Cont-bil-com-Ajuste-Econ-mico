@@ -20,22 +20,22 @@ import matplotlib.pyplot as plt
 - Título da página (`header`): Projeto Final – Análise Contábil com Ajuste Econômico
 - Descrição projeto (`write`): Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.
 """
-
-
-
-
-import streamlit as st
-
 import pandas as pd
+import streamlit as st
 DataFrame = pd.DataFrame
 
-st.set_page_title = "Lista de Exercícios 4"
-st.write(st.set_page_title)
+st.set_page_config(
+    page_title="Lista de Exercícios 4",
+    page_icon="👋",
+)
 
-st.header = "Projeto Final – Análise Contábil com Ajuste Econômico"
-st.write(st.header)
+st.header("Projeto Final – Análise Contábil com Ajuste Econômico")
 
-st = ("Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.")
+st.write(
+    "Este projeto tem como objetivo integrar análise de dados contábeis de empresas "
+    "com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit."
+
+
 
 """2) Importe os dados do arquivo empresas_dados.csv utilizando pandas e apresente todas as linhas da df (peso: 1,0)
 
