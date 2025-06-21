@@ -35,16 +35,16 @@ st.write(st.set_page_title)
 st.header = "Projeto Final – Análise Contábil com Ajuste Econômico"
 st.write(st.header)
 
-st.write = ("Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.")
+st = ("Este projeto tem como objetivo integrar análise de dados contábeis de empresas com indicadores econômicos, utilizando Python, Pandas, Ipeadata e Streamlit.")
 
 """2) Importe os dados do arquivo empresas_dados.csv utilizando pandas e apresente todas as linhas da df (peso: 1,0)
 
 Dica: Utilize `head(len(df))`
 """
 
-import pandas as pd
-df = pd.read_csv('content/empresas_dados.csv', sep=";")
-st.dataframe(df.head(len(df)))
+arquivo = ("/content/empresas_dados.csv")
+df = pd.read_csv(arquivo, sep=';')
+(st.head(len(df)))
 
 """3) Calcule os indicadores Margem Líquida e ROA e salve como novas coluna da df. Depois apresente os dois indicadores no mesmo gráfico de linhas, agrupado por Ano  (peso: 1,0)
 
