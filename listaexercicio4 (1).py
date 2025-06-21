@@ -109,7 +109,8 @@ st.write("\nColunas após a alteração:")
 print(df_ipca.columns)
 
 st.write("\nDataFrame resultado:")
-st_ipca
+st.dataframe(df_ipca)
+
 
 """5) Combine as duas df (Excel e IPEA) em uma nova df e calcule nova coluna chamada Receita Real (peso: 2,0)
 
