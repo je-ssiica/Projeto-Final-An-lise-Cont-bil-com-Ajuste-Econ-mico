@@ -156,8 +156,8 @@ ax.plot(df_combined['Ano'], df_combined['Receita Real'], marker='s', label='Rece
 ax.set_title('Receita Líquida e Receita Real ao longo dos anos')
 ax.set_xlabel('Ano')
 ax.set_ylabel('Valor')
-ax.set.legend()
-ax.set.grid(True)
+ax.legend()
+ax.grid(True)
 plt.show()
 st.pyplot(fig)
 
