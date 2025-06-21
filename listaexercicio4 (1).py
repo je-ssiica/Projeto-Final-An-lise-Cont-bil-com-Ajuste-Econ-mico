@@ -61,7 +61,7 @@ fig, ax = plt.subplots()
 
 st_grouped = df.groupby('Ano')[['Margem Líquida', 'ROA']].mean().reset_index()
 
-ax.set.figure(figsize=(10,6))
+fig, ax = plt.subplots(figsize=(10, 6))
 ax.set.plot(df_grouped['Ano'], df_grouped['Margem Líquida'], marker='o', label='Margem Líquida (%)')
 ax.set.plot(df_grouped['Ano'], df_grouped['ROA'], marker='o', label='ROA (%)')
 
